@@ -1,16 +1,40 @@
 <template>
-  <h1>Line Chart</h1>
-  <VueNvd3 :options="lineChartOptions" :data="lineChartData"></VueNvd3>
-  <h1>Pie Chart</h1>
-  <VueNvd3 :options="pieChartOptions" :data="pieChartData"></VueNvd3>
-  <h1>Discrete Bar Chart</h1>
-  <VueNvd3 :options="discreteBarChartOptions" :data="discreteBarChartData"></VueNvd3>
-  <h1>Multi Bar Chart</h1>
-  <VueNvd3 :options="multiBarChartOptions" :data="multiBarChartData"></VueNvd3>
-  <h1>Multi Bar Horizontal Chart</h1>
-  <VueNvd3 :options="multiBarHorizontalChartOptions" :data="multiBarHorizontalChartData"></VueNvd3>
-  <h1>Stacked Area Chart</h1>
-  <VueNvd3 :options="stackedAreaChartOptions" :data="stackedAreaChartData"></VueNvd3>
+  <div class="flex">
+    <div class="col">
+      <h1>Line Chart</h1>
+      <VueNvd3 :options="lineChartOptions" :data="lineChartData"></VueNvd3>
+    </div>
+    <div class="col">
+        <h1>Pie Chart</h1>
+        <VueNvd3 :options="pieChartOptions" :data="pieChartData"></VueNvd3>
+    </div>
+  </div>
+  <div class="flex">
+    <div class="col">
+      <h1>Discrete Bar Chart</h1>
+      <VueNvd3 :options="discreteBarChartOptions" :data="discreteBarChartData"></VueNvd3>
+    </div>
+    <div class="col">
+      <h1>Multi Bar Chart</h1>
+      <VueNvd3 :options="multiBarChartOptions" :data="multiBarChartData"></VueNvd3>
+    </div>
+  </div>
+  <div class="flex">
+    <div class="col">
+       <h1>Multi Bar Horizontal Chart</h1>
+       <VueNvd3 :options="multiBarHorizontalChartOptions" :data="multiBarHorizontalChartData"></VueNvd3>
+    </div>
+    <div class="col">
+        <h1>Stacked Area Chart</h1>
+        <VueNvd3 :options="stackedAreaChartOptions" :data="stackedAreaChartData"></VueNvd3>
+    </div>
+  </div>
+  
+
+  
+  
+ 
+
 </template>
 
 
@@ -543,5 +567,12 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.flex {
+  display: flex;
+}
+.col {
+  flex: 1;
+  padding: 20px;
 }
 </style>
